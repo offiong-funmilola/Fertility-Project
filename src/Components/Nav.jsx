@@ -18,17 +18,16 @@ function Nav() {
     <>
       <nav className='w-full h-full bg-inherit flex items-center justify-center'>
        <div className='flex items-center justify-center mr-auto'>
-        <div className='w-10 h-14'><img src={logo} alt='signature'/></div>
-        <p className='inline text font-sans font-medium text-lg xl:text-xl'>Fertility Pal</p>
+        <p className='inline text font-sans font-medium text-lg xl:text-xl italic'>Fertility Pal</p>
        </div>
-       <div className='hidden md:flex gap-4 lg:6 xl:10'>
-        <Link to='/' className='text font-sans font-bold text-sm lg:text-lg lg:py-2 px-3 xl:text-xl'>Home</Link>
-        <Link to='/community' className='font-sans font-bold text-sm lg:text-lg lg:py-2 px-3 xl:text-xl'>Community</Link>
-        <Link to='/chat' className='font-sans font-bold text-sm lg:text-lg lg:py-2 px-3 xl:text-xl'>Chat with a doctor</Link>
-        <Link to='/article' className='font-sans font-bold text-sm lg:text-lg  lg:py-2 px-3 xl:text-xl'>Article</Link>
-        <Link to='/contact' className='font-sans font-bold text-sm lg:text-lg lg:py-2 px-3 xl:text-xl'>Contact Us</Link>
-        <Link to='/login' className='border-line text font-sans bg-white font-bold text-sm lg:text-lg lg:py-2 px-4 xl:text-xl'>Sign in</Link>
-        <Link to='/register' className='back font-sans font-bold  text-white text-sm lg:text-lg lg:py-2 px-4 xl:text-xl'>Register</Link>
+       <div className='hidden md:flex md:gap-2 lg:gap-0'>
+        <Link to='/' className='text font-sans font-bold text-sm lg:py-2 px-3 xl:text-xl'>Home</Link>
+        <Link to='/community' className='font-sans font-bold text-sm lg:py-2 px-3 xl:text-xl'>Community</Link>
+        <Link to='/chat' className='font-sans font-bold text-sm  lg:py-2 px-3 xl:text-xl'>Chat with a doctor</Link>
+        <Link to='/article' className='font-sans font-bold text-sm  lg:py-2 px-3 xl:text-xl'>Article</Link>
+        <Link to='/contact' className='font-sans font-bold text-sm lg:py-2 px-3 xl:text-xl'>Contact Us</Link>
+        <Link to='/login' className='border-line text font-sans bg-white font-bold text-sm lg:py-2 px-4 xl:text-xl mr-2'>Sign in</Link>
+        <Link to='/register' className='back font-sans font-bold  text-white text-sm lg:py-2 px-4 xl:text-xl'>Register</Link>
        </div>
        <button type='button' onClick={handleClick} className='w-10 h-10 md:hidden'>{!menu ? <FaBars /> : <FaTimes />}</button>
       </nav>

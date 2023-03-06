@@ -36,10 +36,10 @@ function Home() {
             <div className='flex flex-col w-full h-fit justify-center pt-8 pb-12 md:justify-between md:flex-row md:h-[592px] md:pt-12 md:pb-4 lg:pt-16 lg:pb-12'>
                 <div className='w-full flex flex-col mb-14 justify-center md:w-1/2 md:mb-0'>
                     <div className='pb-3 md:pd-0 lg:pb-3'>
-                            <h1 className="card-title text-5xl font-sans font-semibold md:text-3xl lg:text-5xl">The Trusted Platform That</h1>
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-5xl lg:mt-4">Provides All The</h1> 
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-5xl lg:mt-4">Information You Need To</h1>
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-5xl lg:mt-4">Know About fertility</h1>  
+                            <h1 className="card-title text-5xl font-sans font-semibold md:text-3xl lg:text-4xl">The Trusted Platform That</h1>
+                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-4">Provides All The</h1> 
+                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-4">Information You Need To</h1>
+                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-4">Know About fertility</h1>  
                         </div>
                         <div className='w-3/4 mt-3'>
                             <p className='font-sans font-normal text-lg md:text-base lg:text-xl'>Your one stop health platform that provides you with the most 
