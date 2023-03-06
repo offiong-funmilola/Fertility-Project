@@ -37,18 +37,18 @@ function Home() {
                 <div className='w-full flex flex-col mb-14 justify-center md:w-1/2 md:mb-0'>
                     <div className='pb-3 md:pd-0 lg:pb-3'>
                             <h1 className="card-title text-5xl font-sans font-semibold md:text-3xl lg:text-4xl">The Trusted Platform That</h1>
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-4">Provides All The</h1> 
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-4">Information You Need To</h1>
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-4">Know About fertility</h1>  
+                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Provides All The</h1> 
+                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Information You Need To</h1>
+                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Know About fertility</h1>  
                         </div>
-                        <div className='w-3/4 mt-3'>
-                            <p className='font-sans font-normal text-lg md:text-base lg:text-xl'>Your one stop health platform that provides you with the most 
+                        <div className='w-full mt-3'>
+                            <p className='font-sans font-normal text-lg md:text-base lg:text-lg'>Your one stop health platform that provides you with the most 
                                 reliable information about everything relating to fertility. 
                                 We have carefully curated thousands of articles from fertility specialists 
                                 to answer your questions and guide you on your journey
                             </p>
                         </div>
-                        <div className="flex mt-8 md:pt-2 lg:mt-8">
+                        <div className="flex mt-8 md:pt-2 lg:mt-3">
                             <div className="back text-white p-3 font-sans font-medium text-xl">
                                Chat With A Doctor
                             </div>
@@ -68,7 +68,7 @@ function Home() {
             </div>
             {/* grid grid-cols-2 md:grid-cols-4 justify-between text-center pb-14 */}
             
-            <div className='w -full flex flex-wrap font-medium text-2xl justify-between md:flex-nowrap pb-14'>
+            <div className='w -full mt-5 flex flex-wrap font-medium text-2xl justify-between md:flex-nowrap pb-14'>
                     <div className='flex flex-col items-center justify-center'>
                         <p >50+</p>
                         <p>Doctors</p>
