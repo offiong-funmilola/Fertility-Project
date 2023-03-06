@@ -1,7 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
-import logo from './Assets/logo.png'
 import {FaBars, FaTimes} from 'react-icons/fa';
 
 function Nav() {
