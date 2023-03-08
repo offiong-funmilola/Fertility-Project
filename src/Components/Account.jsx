@@ -6,8 +6,8 @@ function Account() {
   return (
     <div className=' w-full h-screen grid grid-col-6 grid-rows-1 px-14 lg:px-28'>
         <div className='flex flex-col items-center col-span-1 bg-white border-r-2 border-black pt-14'>
-            <h5 className='font-semibold text-3xl pb-16'>My Account</h5>
-            <div className='flex flex-col gap-16'>
+            <h5 className='font-semibold text-3xl pb-12'>My Account</h5>
+            <div className='flex flex-col gap-8'>
                 <div className='flex gap-3 font-medium text-xl'><FaUser className='w-9 h-9 ' /> Profile</div>
                 <div className='flex gap-3 font-medium text-xl'><FaCalendar className='w-9 h-9 '/> Peroid Tracker</div>
                 <div className='flex gap-3 font-medium text-xl'><FaCalendarDay className='w-9 h-9 '/> Appointment</div>

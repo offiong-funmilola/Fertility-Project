@@ -1,27 +1,39 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import {useFormik} from 'formik';
 import * as yup from 'yup';
 import "yup-phone";
 import {useContext} from 'react';
 import RegContext from './Context/RegContext';
-import { FaEye, FaEyeSlash } from 'react-icons/fa'
-
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import useSubmit from './Hook/useSubmit';
+import { toast } from 'react-toastify';
 
 function Registration() {
-    const {hide, handlePassword} =useContext(RegContext);
+    const navigate = useNavigate();
+    const {response,submit} =useSubmit();
+    const {hide, type, handlePassword} =useContext(RegContext);
     const REGEX_PASSWORD = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     const formik = useFormik({
         initialValues: {
             fullName: '',
             userName: '',
             email: '',
-            phone: '',
+            phoneNumber: '',
             password: '',    
         },
        
         onSubmit: (values) => {
-            console.log(values)
+            submit("http://localhost:5000/users", values);
+            if (response.status === 201) {
+                toast.success("Congratulation! You have completed your registration");
+                formik.resetForm();
+                navigate('/account');  
+            }
+            if (response.status > 300) {
+                toast.error("Something went wrong, Please try again")
+            }  
+            
         },
         validationSchema: yup.object({
             fullName: yup.string().required('Required'),
@@ -76,15 +88,15 @@ function Registration() {
                         </div>
                         <div className='w-full mb-3 font-normal text-lg relative'>
                             <label htmlFor='password' className='block mb-2'>Password</label>
-                            <input type='password' name='password' placeholder='password' className='p-3 px-5 w-full border-2 border-slate-400 rounded-lg'
+                            <input type={type} name='password' placeholder='password' className='p-3 px-5 w-full border-2 border-slate-400 rounded-lg'
                                 value={formik.values.confirmPassword} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
                             <div onClick={handlePassword} className='w-5 h-5 absolute top-0 right-3 translate-y-12'>{hide ? <FaEyeSlash className='w-5 h-5'/> : <FaEye className='w-5 h-5'/>}</div>
                             {formik.errors.password && formik.touched.password ? (<div className='red'>{formik.errors.password}</div>) : null}    
                         </div>
                     </div>
-                    <Link to='/account' className='back w-1/2 self-center flex items-center justify-center rounded-sm mt-11 mb-6'>
-                        <button type='submit' className='p-5 border-0 text-xl text-white font-bold font-sans' disabled={!formik.isValid}>Save Changes</button>
-                    </Link>    
+                    <div className='back w-1/2 self-center flex items-center justify-center rounded-sm mt-11 mb-6'>
+                        <button type='submit' className='w-full p-5 border-0 text-xl text-white font-bold font-sans disabled:bg-lime-800' disabled={!formik.isValid}>Save Changes</button>
+                    </div>    
                 </form>
                                 
             </div>

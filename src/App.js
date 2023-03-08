@@ -13,14 +13,15 @@ import Article from './Components/Article';
 import Account from './Components/Account';
 import Registration from './Components/Registration';
 import {RegProvider} from './Components/Context/RegContext';
-import {AlertProvider} from './Components/Context/AlertContext';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <RegProvider>
-      <AlertProvider>
         <Router>
           <>
+            <ToastContainer theme='colored'></ToastContainer>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/community' element={<Community/>} />
@@ -37,7 +38,6 @@ function App() {
             </Routes>
           </> 
         </Router>
-      </AlertProvider>
     </RegProvider> 
   );
 }

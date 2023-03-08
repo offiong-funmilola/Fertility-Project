@@ -20,11 +20,11 @@ function Forgot() {
     })
     // console.log(formik.errors)
     return (
-        <section className='w-full h-screen reg'>
+        <section className='w-full max-h-fit reg'>
             <div className='w-full bg-white h-20 px-14 lg:px-24'>
                <Header />
             </div>
-            <div className='w-full h-3/4 py-28'>
+            <div className='reg w-full h-full py-28'>
                 <div className='w-full h-full flex items-center justify-center'>
                     <div className='w-full h-full md:w-3/5 bg-white flex flex-col items-center rounded-lg px-12 md:px-6 lg:px-28 xl:px-36 '>
                         <h5 className='font-sans text text-2xl font-semibold self-center text-center mt-20'>Forgot password?</h5>

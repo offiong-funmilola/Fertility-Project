@@ -1,11 +1,22 @@
 {
   "registers": [
     {
-      "email": "fawolefunmilola2@gmail.com",
+      "email": "fawolefunmmilola2@gmail.com",
       "phoneNumber": "07066296861",
-      "password": "AQW@12ert",
-      "confirmPassword": "AQW@12ert",
+      "password": "Offiong@20",
       "id": 1
     }
-  ]
+  ],
+  "users": [
+    {
+      "fullName": "Funmilola Offiong",
+      "userName": "smiles",
+      "email": "fawolefunmmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "location": "Ibadan, Oyo",
+      "id": 1
+    }
+  ],
+  "logUsers": []
 }
