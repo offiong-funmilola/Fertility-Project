@@ -11,7 +11,7 @@ function Nav() {
        
         setTimeout(()=>{
             setMenu(menu);
-            }, 3000)
+            }, 5000)
     }
   return (
     <>
@@ -23,21 +23,21 @@ function Nav() {
         <Link to='/' className='text font-sans font-bold text-sm lg:py-2 px-3 xl:text-xl'>Home</Link>
         <Link to='/community' className='font-sans font-bold text-sm lg:py-2 px-3 xl:text-xl'>Community</Link>
         <Link to='/chat' className='font-sans font-bold text-sm  lg:py-2 px-3 xl:text-xl'>Chat with a doctor</Link>
-        <Link to='/article' className='font-sans font-bold text-sm  lg:py-2 px-3 xl:text-xl'>Article</Link>
+        <Link to='/resources' className='font-sans font-bold text-sm  lg:py-2 px-3 xl:text-xl'>Article</Link>
         <Link to='/contact' className='font-sans font-bold text-sm lg:py-2 px-3 xl:text-xl'>Contact Us</Link>
         <Link to='/login' className='border-line text font-sans bg-white font-bold text-sm lg:py-2 px-4 xl:text-xl mr-2'>Sign in</Link>
         <Link to='/register' className='back font-sans font-bold  text-white text-sm lg:py-2 px-4 xl:text-xl'>Register</Link>
        </div>
        <button type='button' onClick={handleClick} className='w-10 h-10 md:hidden'>{!menu ? <FaBars /> : <FaTimes />}</button>
       </nav>
-      <div className={!menu ? 'hidden' :'bg-transparent w-full flex flex-col fixed z-40 gap-4' }>
+      <div className={!menu ? 'hidden' :'w-full bg-white flex flex-col fixed z-50 gap-4 px-14 items-center' }>
       <Link to='/' className='text font-sans font-bold text-xl'>Home</Link>
-        <Link to='./Community' className='font-sans font-bold text-xl'>Community</Link>
-        <Link to='./BookAppointment' className='font-sans font-bold text-xl'>Book An Appointment</Link>
-        <Link to='/Blog' className='font-sans font-bold text-xl'>Blog</Link>
-        <Link to='/AboutUs' className='font-sans font-bold text-xl'>About Us</Link>
-        <Link to='/SignIn' className=' text font-sans bg-white font-bold text-xl'>Sign-in</Link>
-        <Link to='/Register' className=' text font-sans font-bold  text-white text-xl'>Register</Link>
+        <Link to='./community' className='font-sans font-bold text-xl'>Community</Link>
+        <Link to='./chat' className='font-sans font-bold text-xl'>Chat with a doctor</Link>
+        <Link to='/article' className='font-sans font-bold text-xl'>Article</Link>
+        <Link to='/contact' className='font-sans font-bold text-xl'>Contact Us</Link>
+        <Link to='/login' className='text font-sans bg-white font-bold text-xl'>Sign-in</Link>
+        <Link to='/register' className='text font-sans font-bold  text-white text-xl'>Register</Link>
       </div>
     </>
   )

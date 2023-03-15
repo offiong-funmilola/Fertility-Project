@@ -5,6 +5,30 @@
       "phoneNumber": "07066296861",
       "password": "Offiong@20",
       "id": 1
+    },
+    {
+      "email": "amandabrown@gmail.com",
+      "phoneNumber": "+2349052871645",
+      "password": "Amanda@45",
+      "id": 2
+    },
+    {
+      "email": "amandabrown@gmail.com",
+      "phoneNumber": "+2349052871645",
+      "password": "Amanda@45",
+      "id": 3
+    },
+    {
+      "email": "amandabrown@gmail.com",
+      "phoneNumber": "+2349052871645",
+      "password": "Amanda@45",
+      "id": 4
+    },
+    {
+      "email": "amandabrown@gmail.com",
+      "phoneNumber": "+2349052871645",
+      "password": "Amanda@45",
+      "id": 5
     }
   ],
   "users": [
@@ -18,5 +42,42 @@
       "id": 1
     }
   ],
-  "logUsers": []
+  "resources": [
+    {
+      "id": 1,
+      "title": "What is PCOS and how does it affect your reproductive organs",
+      "image": "https://res.cloudinary.com/dl4qusu4m/image/upload/v1677363665/Rectangle_fdawbp.png",
+      "text": "Polycystic ovary syndrome (PCOS) is a hormonal imbalance that occurs when your ovaries (the organ that produces and releases eggs) create excess hormone which may cause small cysts on the ovaries. PCOS can cause missed or irregular menstrual periods, excess hair growth, acne, infertility, and weight gain."
+    },
+    {
+      "id": 2,
+      "title": "Ovulation Calculator; How to Know Your Most Fertile Days",
+      "image": "https://res.cloudinary.com/dl4qusu4m/image/upload/v1678649688/Rectangle_fczw7u.png",
+      "text": "By tracking your ovulation cycle, you can know when is the best time for you to have sex with your partner if you want to have a baby. Ideally, if you have sex within your ovulation period, the chances of getting pregnant is fairly high."
+    },
+    {
+      "id": 3,
+      "title": "CONTRACEPTION; All you need to know",
+      "image": "https://res.cloudinary.com/dl4qusu4m/image/upload/v1678650330/blog4_myijqu.png",
+      "text": "Birth control, also known as contraception, is the use of medicines, devices, or surgery to prevent pregnancy. There are many different types. Some are reversable, while others are permanent. Some types can also help prevent Sexually Transmitted Infections (STIs)."
+    },
+    {
+      "id": 4,
+      "title": "What Is Ovulation? What to Know About Your Menstrual Cycle",
+      "image": "https://res.cloudinary.com/dl4qusu4m/image/upload/v1678649829/Rectangle_1_imjert.png",
+      "text": "Ovulation is a part of your menstrual cycle. It occurs when an egg is released from your ovary. when the egg is released, it may or may not be fertilized by sperm. If fertilized, the egg may travel to the uterus and implant to develop into a pregnancy. If left unfertilized, the egg disintegrates and the uterine lining..."
+    },
+    {
+      "id": 5,
+      "title": "5 Things You May Not Know About Your Period",
+      "image": "https://res.cloudinary.com/dl4qusu4m/image/upload/v1678650129/Rectangle_2_ehujsm.png",
+      "text": "You might probably know the basics when it comes to the menstrual cycle.However, there are many things women of all ages who don’t know about their periods! Here are some facts that probably you didn’t know but that could prove very useful."
+    },
+    {
+      "id": 6,
+      "title": "Symptoms and causes of irregular periods",
+      "image": "https://res.cloudinary.com/dl4qusu4m/image/upload/v1678650535/Rectangle_3_b3brho.png",
+      "text": "Sometimes, irregular periods can be caused by some medicines, exercising too much, having a very low or high body weight, or not eating enough calories. Hormone imbalances can also cause irregular periods."
+    }
+  ]
 }

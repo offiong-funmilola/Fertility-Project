@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import "yup-phone";
 import {useContext} from 'react';
 import RegContext from './Context/RegContext';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaCamera } from 'react-icons/fa';
 import useSubmit from './Hook/useSubmit';
 import { toast } from 'react-toastify';
 
@@ -51,9 +51,15 @@ function Registration() {
     // console.log(formik.errors)
   return (
     <div className='w-full py-28 px-14 lg:px-28 flex items-center justify-center'>
-        <div className='w-3/4 flex-col'>
-        <h5 className='font-semibold text-3xl pb-16'>Profile Setting</h5>
-            <div className='w-full flex flex-col font-normal text-lg'>
+        <div className='w-full md:w-3/4 flex flex-col'>
+            <h5 className='font-semibold text-3xl font-sans text-center'>Set Up Your Profile</h5>
+            <div className='flex h-32 items-center gap-4 self-center'>
+                <div className='flex items-center justify-center w-12 h-12 rounded-full bg-gray-200'>
+                    <FaCamera className='text-xl text-white'/>
+                </div>
+                <p className='font-normal text-lg font-sans'>Choose your Avatar</p>
+            </div>
+            <div className='w-full flex flex-col font-normal text-lg font-sans'>
                 <form className='w-full flex flex-col my-6 px-3' onSubmit={formik.handleSubmit}>
                     <div className='w-full grid grid-cols-2 gap-x-14 gap-y-3 md:grid-cols-2'>
                         <div className='w-full mb-3 font-normal text-lg'>

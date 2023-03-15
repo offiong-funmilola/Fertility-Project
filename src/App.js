@@ -15,6 +15,9 @@ import Registration from './Components/Registration';
 import {RegProvider} from './Components/Context/RegContext';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Resources from './Components/Resources';
+import Donate from './Components/Donate';
+import Payment from './Components/Payment';
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
               <Route path='/reset' element={<Reset/>}/>
               <Route path='/account' element={<Account/>}/>
               <Route path='/registration' element={<Registration/>}/>
+              <Route path='/resources' element={<Resources/>}/>
+              <Route path='/donate' element={<Donate/>}/>
+              <Route path='/payment' element={<Payment/>}/>
             </Routes>
           </> 
         </Router>

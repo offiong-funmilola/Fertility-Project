@@ -1,11 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import doctor1 from './Assets/doctor1.png';
-import doctor2 from './Assets/doctor2.png';
-import doctor3 from './Assets/doctor3.png';
+import newhero from './Assets/newhero.png';
 import community from './Assets/community.png';
-import chat from './Assets/chat.png';
+import chat from './Assets/update1.png';
 import blog from './Assets/blog1.png';
 import check from './Assets/blog4.png';
 import use from './Assets/blog3.png';
@@ -20,7 +19,7 @@ import article from './Assets/article.png';
 import test1 from './Assets/test1.png';
 import test2 from './Assets/test2.png';
 import test3 from './Assets/test3.png';
-import community2 from './Assets/community2.png';
+import community2 from './Assets/update2.png';
 import meet3 from './Assets/meet3.png';
 import meet2 from './Assets/meet2.png';
 import meet1 from './Assets/meet1.png';
@@ -31,15 +30,15 @@ import support from './Assets/support.png';
 function Home() {
   return (
     <div className='w-full'>
-        <section className='w-full px-14 lg:px-28 flex flex-col'>
+        <section className='w-full px-8 lg:px-20 flex flex-col'>
             <Header />
             <div className='flex flex-col w-full h-fit justify-center pt-8 pb-12 md:justify-between md:flex-row md:h-[592px] md:pt-12 md:pb-4 lg:pt-16 lg:pb-12'>
                 <div className='w-full flex flex-col mb-14 justify-center md:w-1/2 md:mb-0'>
                     <div className='pb-3 md:pd-0 lg:pb-3'>
-                            <h1 className="card-title text-5xl font-sans font-semibold md:text-3xl lg:text-4xl">The Trusted Platform That</h1>
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Provides All The</h1> 
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Information You Need To</h1>
-                            <h1 className="card-title text-5xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Know About fertility</h1>  
+                            <h1 className="card-title text-4xl font-sans font-semibold md:text-3xl lg:text-4xl">The Trusted Platform That</h1>
+                            <h1 className="card-title text-4xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Provides All The</h1> 
+                            <h1 className="card-title text-4xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Information You Need To</h1>
+                            <h1 className="card-title text-4xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Know About fertility</h1>  
                         </div>
                         <div className='w-full mt-3'>
                             <p className='font-sans font-normal text-lg md:text-base lg:text-lg'>Your one stop health platform that provides you with the most 
@@ -54,40 +53,34 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                <div className='grid grid-cols-3'>
+                <div className='flex items-center justify-center'>
                     <figure className=''>
-                        <img src={doctor1} alt="Hero"/>
-                    </figure>
-                    <figure className=''>
-                        <img src={doctor2} alt="Hero"/>
-                    </figure>
-                    <figure className=''>
-                        <img src={doctor3} alt="Hero"/>
+                        <img src={newhero} alt="Hero"/>
                     </figure>
                 </div>
             </div>
             {/* grid grid-cols-2 md:grid-cols-4 justify-between text-center pb-14 */}
-            
-            <div className='w -full mt-5 flex flex-wrap font-medium text-2xl justify-between md:flex-nowrap pb-14'>
-                    <div className='flex flex-col items-center justify-center'>
+            {/* flex flex-wrap gap-6 font-medium text-2xl justify-between md:flex-nowrap */}
+            <div className='w-full mt-5 grid grid-cols-2 md:grid-cols-4 justify-between gap-5 pb-14'>
+                    <div className='flex flex-col items-center justify-center text-lg font-sans font-semibold'>
                         <p >50+</p>
                         <p>Doctors</p>
                     </div>
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='flex flex-col items-center justify-center text-lg font-sans font-semibold'>
                         <p >200+</p>
                         <p>Patients</p>
                     </div>
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='flex flex-col items-center justify-center text-lg font-sans font-semibold'>
                         <p >02+</p>
                         <p>Years Of Experience</p>
                     </div>
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='flex flex-col items-center justify-center text-lg font-sans font-semibold'>
                         <p >90%</p>
                         <p>Health Success</p>
                     </div>
                 </div>
         </section>
-        <section className='back2 w-full px-14 lg:px-28'>
+        <section className='back2 w-full px-8 lg:px-20'>
             <div className='flex flex-col items-center justify-center py-14'>
                 <div className='pb-12'>
                     <h3 className='font-sans text-4xl font-semibold'>Who We Are?</h3>
@@ -106,10 +99,18 @@ function Home() {
                         connect with a community annonymously.
                     </p>
                 </div>
+                <div className='flex flex-col items-center justify-center mt-12 md:mt-24'>
+                    <h3 className='font-sans text-4xl font-semibold'>Make A Donation To Support Our Cause</h3>
+                    <p className='font-sans font-normal text-2xl mt-12 mb-20'>We are committed to supporting 1 million families on their journey 
+                        to fertility by the end of 2023. Help a family overcome the financial 
+                        difficulties with infertility treatment  by donating.
+                    </p>
+                    <Link to='/donate' className='text-center back w-44 h-14 text-white p-3 font-sans font-medium text-xl'>Donate</Link>
+                </div>
             </div>
 
         </section>
-        <section className='w-full px-14 lg:px-28 flex flex-col'>
+        <section className='w-full px-8 lg:px-20 flex flex-col'>
             <div className='w-full bg-white py-16'>
                 <div className='mb-12'>
                     <h3 className='font-sans text-4xl font-semibold text-center'>Our Services</h3>
@@ -161,7 +162,7 @@ function Home() {
             </div>
 
         </section>
-        <section className='back2 w-full px-14 lg:px-28'>
+        <section className='back2 w-full px-8 lg:px-20'>
             <div className='w-full py-14 md:py-8 flex flex-col'> 
                 <div className="card w-full flex flex-col gap-10 md:gap-20 md:flex-row">
                     <figure className='w-full md:w-1/2'>
@@ -192,7 +193,7 @@ function Home() {
                 </div>         
             </div>
         </section>
-        <section className='w-full px-14 lg:px-28'>
+        <section className='w-full px-8 lg:px-20'>
             <div className='w-full py-16 flex flex-col'>
                 <div className='font-sans text-4xl font-semibold text-center mb-12'>
                     <h3>Meet Our Doctors</h3>
@@ -264,13 +265,15 @@ function Home() {
                 </div>
             </div>
         </section>
-        <section className='w-full px-14 lg:px-28'>
+        <section className='w-full px-8 lg:px-20'>
             <div>
                 <div className='w-full h-16 flex items-center justify-between pb-12'>
-                    <h3 className='text-4xl font-semibold'>Articles</h3>
-                    <div className='w-24 h-9 text flex flex-row gap-2 items-center justify-center'>
-                        View All<FaArrowRight className='mt-0'/>
+                    <div>
+                        <h3 className='text-4xl font-semibold'>Articles</h3>
                     </div>
+                    <Link to='/resources'className='w-24 h-9 text flex flex-row gap-2 items-center justify-center'>
+                        View All<FaArrowRight className='mt-0'/>
+                    </Link>
                 </div>
                 <div className='w-full flex gap-10 flex-col items-center md:flex-row justify-between'>
                     <div className="card w-80 blog h-[600px]">
@@ -295,7 +298,7 @@ function Home() {
                                 Some are reversable, while others are permanent. Some types can also help 
                                 prevent Sexually Transmitted Infections (STIs).
                             </p> 
-                            <div className='w-28 h-7 mt-3.5 mb-4 text flex flex-row gap-2 items-center justify-center'>Read More <FaArrowRight /></div>   
+                            <Link to='/article' className='w-28 h-7 mt-3.5 mb-4 text flex flex-row gap-2 items-center justify-center'>Read More <FaArrowRight /></Link>   
                         </div>
                     </div>
                     <div className="card blog w-80 h-[600px]">
@@ -314,13 +317,13 @@ function Home() {
             </div>
 
         </section>
-        <section className='w-full px-14 lg:px-28'>
+        <section className='w-full px-8 lg:px-20'>
             <div className='w-full flex flex-col pt-16 pb-36'>
                 <div className='w-full flex flex-col gap-2 pb-16 items-center justify-center'>
                     <h3 className='text-4xl font-semibold'>Testimonials</h3>
                     <p className='font-normal text-2xl'>What Our clients Say About Us</p>
                 </div>
-                <div className='w-full flex flex-row justify-between'>
+                <div className='w-full flex flex-col gap-16 items-center justify-center md:flex-row md:justify-between md:items-start md:gap-0'>
                     <div className='service w-80 h-64 relative flex flex-col items-center'>
                         <div  className='w-24 h-24 top-[-39px] absolute'>
                             <img src={test1} alt=''/>
