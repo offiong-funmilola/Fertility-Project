@@ -1,25 +1,26 @@
 import React from 'react'
-import {FaCcMastercard, FaCaretRight} from 'react-icons/fa';
+import {FaCcMastercard, FaCaretRight } from 'react-icons/fa';
+// import card from './Assets/card.png';
 
 function Payment() {
   return (
     <div className='w-full h-screen grid grid-cols-12 grid-rows-1 bg-neutral-100 gap-5 py-10'>
         <div className='col-start-2 col-span-7 bg-white flex justify-center'>
             <div className='w-2/3 flex flex-col'>
-                <h4 className='font-semibold text-4xl font-sans mt-6 mb-12'>Payment Method</h4>
-                <p className='font-medium text-xl font-sans mb-6'>Choose a payment method </p>
-                <div className='w-full flex justify-between mb-10'>
+                <h4 className='font-semibold text-4xl font-sans mt-6 mb-6'>Payment Method</h4>
+                <p className='font-medium text-xl font-sans mb-2'>Choose a payment method </p>
+                <div className='w-full flex justify-between mb-5'>
                     <div className='w-12 h-8 border border-gray-500 bg-white flex items-center justify-center hover:border-emerald-500'>
-                    <button type='button' className='p-5'><FaCcMastercard className='text-amber-600 text-lg' /></button>
+                    <button type='button' className='p-5'><FaCcMastercard className='text-amber-600 text-lg w-8 h-8' /></button>
                     </div>
                     <div className='w-12 h-8 border border-gray-500 bg-white flex items-center justify-center  hover:border-emerald-500'>
-                    <button type='button' className='p-5'><FaCaretRight className='text-lg text-blue-900 shadow-sm shadow-sky-500 '/></button>
+                    <button type='button' className='p-5'><FaCaretRight className='text-lg w-8 h-8'/></button>
                     </div>
                     <div className='w-12 h-8 border border-gray-500 bg-white flex items-center justify-center  hover:border-emerald-500'>
                     <button type='button' className='p-5 font-sans  text-blue-900 font-bold text-lg'>VISA</button>
                     </div>
                 </div>
-                <p className='font-medium text-xl font-sans mb-6'>Card Info</p>
+                <p className='font-medium text-2xl font-sans mb-4'>Card Info</p>
                 <div className='w-full mb-4'>
                     <label className='block font-normal text-base font-sans'>CardHolder Name</label>
                     <input className='w-full px-5 py-4 border border-gray-500 ' />
@@ -50,7 +51,7 @@ function Payment() {
                     <p className='font-normal text-lg'>#5000</p>
                 </div>
                 <hr></hr>
-                <div className='flex justify-between mb-52'>
+                <div className='flex justify-between mb-40'>
                     <h6 className='font-normal text-lg'>Total</h6>
                     <p className='font-normal text-lg'>#5000</p>
                 </div> 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
 import Community from './Components/Community';
@@ -18,10 +18,24 @@ import 'react-toastify/dist/ReactToastify.css';
 import Resources from './Components/Resources';
 import Donate from './Components/Donate';
 import Payment from './Components/Payment';
+import {AuthProvider} from './Components/Context/AuthContext';
+import {useState, useEffect} from 'react';
+import {auth} from './config/firebase';
+import {onAuthStateChanged} from 'firebase/auth';
+import VerifyEmail from './Components/VerifyEmail';
+import PrivateWrapper from './Components/PrivateWrapper';
 
 function App() {
+  const [currentUser, setCurrentUser] =useState(null);
+  const [timeActive, setTimeActive] =useState(false);
+
+  useEffect(()=> {
+    onAuthStateChanged(auth, (user) => {setCurrentUser(user)})
+  }, [setCurrentUser])
+
   return (
     <RegProvider>
+      <AuthProvider value={{currentUser, timeActive, setTimeActive}}>
         <Router>
           <>
             <ToastContainer theme='colored'></ToastContainer>
@@ -36,14 +50,19 @@ function App() {
               <Route path='/forgot' element={<Forgot/>}/>
               <Route path='/confirm' element={<Confirm/>}/>
               <Route path='/reset' element={<Reset/>}/>
-              <Route path='/account' element={<Account/>}/>
               <Route path='/registration' element={<Registration/>}/>
               <Route path='/resources' element={<Resources/>}/>
               <Route path='/donate' element={<Donate/>}/>
+              <Route path='/verify' element={<VerifyEmail/>}/>
               <Route path='/payment' element={<Payment/>}/>
+              {/* Private Routes */}
+              <Route element={<PrivateWrapper />}>
+                <Route path='/account' element={<Account />} />
+              </Route>
             </Routes>
           </> 
         </Router>
+      </AuthProvider>  
     </RegProvider> 
   );
 }

@@ -6,12 +6,20 @@ import "yup-phone";
 import {useContext} from 'react';
 import RegContext from './Context/RegContext';
 import { FaEye, FaEyeSlash, FaCamera } from 'react-icons/fa';
-import useSubmit from './Hook/useSubmit';
-import { toast } from 'react-toastify';
+// import useSubmit from './Hook/useSubmit';
+// import { toast } from 'react-toastify';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+import {auth, db} from '../config/firebase';
+import {useAuthValue} from './Context/AuthContext';
+import {setDoc, doc} from 'firebase/firestore';
+
+
 
 function Registration() {
-    const navigate = useNavigate();
-    const {response,submit} =useSubmit();
+    // const {currentUser} = useAuthValue();
+    const {setTimeActive} = useAuthValue();
+    const navigate = useNavigate(); 
+    // const {response, submit} =useSubmit();
     const {hide, type, handlePassword} =useContext(RegContext);
     const REGEX_PASSWORD = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     const formik = useFormik({
@@ -20,20 +28,8 @@ function Registration() {
             userName: '',
             email: '',
             phoneNumber: '',
-            password: '',    
-        },
-       
-        onSubmit: (values) => {
-            submit("http://localhost:5000/users", values);
-            if (response.status === 201) {
-                toast.success("Congratulation! You have completed your registration");
-                formik.resetForm();
-                navigate('/account');  
-            }
-            if (response.status > 300) {
-                toast.error("Something went wrong, Please try again")
-            }  
-            
+            password: '', 
+            location: ''   
         },
         validationSchema: yup.object({
             fullName: yup.string().required('Required'),
@@ -46,7 +42,35 @@ function Registration() {
             location: yup.string().required('Required'),
             password: yup.string().matches(REGEX_PASSWORD, 'Enter a strong password with atleast 8 characters')        
                         .required('Required'),    
-        })
+        }),
+
+        onSubmit: (values) => {
+            // submit("http://localhost:5000/users", values);
+            // if (response.status === 201) {
+            //     toast.success("Congratulation! You have completed your registration");
+            //     formik.resetForm();
+            //     navigate('/account');  
+            // }
+            // if (response.status > 300) {
+            //     toast.error("Something went wrong, Please try again")
+            // }  
+            console.log(formik.isValid);
+            if(formik.isValid){
+                createUserWithEmailAndPassword(auth, values.email, values.password)
+                .then(() => {
+                    console.log(auth.currentUser);
+                    sendEmailVerification(auth.currentUser)
+                }).then(()=> {
+                    setTimeActive(true);
+                    navigate('/verify')
+                    console.log(auth.currentUser.uid, values)
+                    const userRef = doc(db, 'users', auth.currentUser.uid);
+                    setDoc(userRef, values, { merge: true })
+                })
+                .catch(err => console.log(err))
+            }
+        }
+       
     })
     // console.log(formik.errors)
   return (

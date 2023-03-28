@@ -13,22 +13,148 @@
       "id": 2
     },
     {
-      "email": "amandabrown@gmail.com",
-      "phoneNumber": "+2349052871645",
-      "password": "Amanda@45",
+      "email": "fawolefunmmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
       "id": 3
     },
     {
-      "email": "amandabrown@gmail.com",
-      "phoneNumber": "+2349052871645",
-      "password": "Amanda@45",
+      "email": "fawolefunmmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
       "id": 4
     },
     {
-      "email": "amandabrown@gmail.com",
-      "phoneNumber": "+2349052871645",
-      "password": "Amanda@45",
+      "email": "fawolefunmmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
       "id": 5
+    },
+    {
+      "email": "fawolefunmmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 6
+    },
+    {
+      "email": "maygeee@yahoo.com",
+      "phoneNumber": "+2348034868413",
+      "password": "Mary@234",
+      "id": 7
+    },
+    {
+      "email": "maygeee@yahoo.com",
+      "phoneNumber": "+2348034868413",
+      "password": "Mary@234",
+      "id": 8
+    },
+    {
+      "email": "ekanoffiong@gmail.com",
+      "phoneNumber": "09056354521",
+      "password": "Password_01",
+      "id": 9
+    },
+    {
+      "email": "ekanoffiong@gmail.com",
+      "phoneNumber": "09056354521",
+      "password": "Password_01",
+      "id": 10
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 11
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 12
+    },
+    {
+      "email": "offiongfunmilola@gmail.com",
+      "phoneNumber": "+2347035584968",
+      "password": "Funmilola@1",
+      "id": 13
+    },
+    {
+      "email": "offiongfunmilola@gmail.com",
+      "phoneNumber": "+2347035584968",
+      "password": "Funmilola@1",
+      "id": 14
+    },
+    {
+      "email": "offiongfunmilola@gmail.com",
+      "phoneNumber": "+2347035584968",
+      "password": "Funmilola@1",
+      "id": 15
+    },
+    {
+      "email": "offiongfunmilola@gmail.com",
+      "phoneNumber": "+2347035584968",
+      "password": "Funmilola@1",
+      "id": 16
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 17
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 18
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 19
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 20
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 21
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 22
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 23
+    },
+    {
+      "email": "fawolefunmilola2@gmail.com",
+      "phoneNumber": "07066296861",
+      "password": "Offiong@20",
+      "id": 24
+    },
+    {
+      "email": "mageee345@gmail.com",
+      "phoneNumber": "09056354521",
+      "password": "Mary@234",
+      "id": 25
+    },
+    {
+      "email": "mageee345@gmail.com",
+      "phoneNumber": "09056354521",
+      "password": "Mary@234",
+      "id": 26
     }
   ],
   "users": [
@@ -40,6 +166,24 @@
       "password": "Offiong@20",
       "location": "Ibadan, Oyo",
       "id": 1
+    },
+    {
+      "fullName": "Mary Godfrey",
+      "userName": "maey",
+      "email": "maygeee@yahoo.com",
+      "phoneNumber": "+2348034868413",
+      "password": "Mary@£234",
+      "location": "Ikeja, Lagos",
+      "id": 2
+    },
+    {
+      "fullName": "Mary Godfrey",
+      "userName": "maey",
+      "email": "maygeee@yahoo.com",
+      "phoneNumber": "+2348034868413",
+      "password": "Mary@£234",
+      "location": "Ikeja, Lagos",
+      "id": 3
     }
   ],
   "resources": [

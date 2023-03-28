@@ -17,8 +17,8 @@ function Resources() {
         <>
             <div className='w-full min-h-fit px-8 lg:px-20'> 
                 <div className=''><Header /></div>
-                <div className='w-full mt-12'>
-                    <h3 className='text-4xl font-semibold text-center mb-20'>Articles</h3>
+                <div className='w-full mt-6'>
+                    <h3 className='text-4xl font-semibold text-center mb-10'>Articles</h3>
                     <div className='w-full flex flex-wrap gap-5 justify-between lg:flex-nowrap'>
                         <div className='font-medium text-base'>Period ovulation</div>
                         <div className='font-medium text-base'>Sexually transmitted infections (STI'S)</div>
@@ -30,7 +30,7 @@ function Resources() {
                         </div>
                     </div>    
                 </div>
-                <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-24 mb-28'>
+                <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-14 mb-28'>
                     <div className="card w-80 blog h-[600px]">
                         <figure className='w-full'><img src={blog} alt="PCOS" /></figure>
                         <div className="card-body px-2">

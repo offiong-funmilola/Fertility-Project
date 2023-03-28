@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from './Header';
-import Footer from './Footer';
 import contact from './Assets/contactus.png';
 
 function Contact() {
   return (
     <>
-      <div className='w-full min-h-fit px-8 lg:px-20'> 
-        <div className='mb-20'><Header /></div>
-        <div className='w-full h-screen flex flex-col items-center justify-center'>
+      <div className='w-full px-8 lg:px-20 flex flex-col'> 
+        <div className='mb-24'>
+          <Header />
+        </div>
+        <div className='w-full h-screen flex flex-col items-center justify-center pt-20 mb-12'>
             <h3 className='text-4xl font-semibold mb-3'>Contact Us</h3>
             <p className='text-2xl font-normal'>Feel free to send us a message to any questions you might have. </p>
           <div className='w-full flex mt-8 mb-32'>
@@ -17,7 +18,7 @@ function Contact() {
               <img src={contact} alt='' className='w-full h-full'/>
               </figure>
             </aside>
-            <form className='w-1/2 pl-5'>
+            <form className='w-1/2 pl-5 mt-10'>
               <div className='w-3/4 mb-5'>
                 <label htmlFor='name' className='block mb-1'>Name</label>
                 <input type='text' name='name' className='w-full py-2 px-4 border-2' />
@@ -42,7 +43,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className='back w-full pb-2'><Footer /></div>
     </>
   )
 }

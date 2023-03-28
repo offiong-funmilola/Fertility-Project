@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './Header';
-import {FaSearch, FaArrowLeft} from 'react-icons/fa';
 import blog1 from './Assets/blog1.png';
 
 function Article() {
@@ -8,40 +7,20 @@ function Article() {
     <section className='w-full bg-white h-20 px-14 lg:px-28 pb-28'>
       <div className='w-full'>
         <Header />
-        <div className='w-full '>
-          <div className='w-full h-14 mt-9 mb-14 justify-center'>
-            <div className='border-2 w-9 h-9 border-gray-600 rounded-full float-left flex items-center justify-center'>
-              <FaArrowLeft className='text-xl'/>
-            </div>
-            <div className='flex flex-col float-right mr-72 w-1/2'>
-              <h2 className='font-semibold text-2xl mb-3 self-center'>Articles</h2>
-              <h2 className='text font-medium text-xl'>Get access to reliable health information from specialists </h2>
-            </div>
-          </div>
-          <div className='w-1/2 mt-10 mx-auto relative mb-5'>
-            <input type='text' placeholder='Search' className=' w-full p-3 border-2 border-gray-600 font-sans font-normal text-lg'/>
-            <FaSearch  className='absolute top-0 right-5 text-xl translate-y-5'/>
-          </div>
-          <p className='text font-sans font-normal text-base text-right mr-28 mb-2.5'>See more</p>
-          <div className='grid grid-cols-4 gap-2.5 mb-20'>
-            <div className='w-60 h-16 reg rounded-lg grid items-center justify-center font-medium text-base'>Period ovulation</div>
-            <div className='border-red-200 border-2 w-60 h-16 rounded-lg grid items-center justify-center font-medium text-base px-8'>Sexually transmitted infections (STI'S)</div>
-            <div className='border-red-200 border-2 w-60 h-16 rounded-lg grid items-center justify-center font-medium text-base '>Contraception</div>
-            <div className='border-red-200 border-2 w-60 h-16 rounded-lg grid items-center justify-center font-medium text-base'>In-vitro fertilization</div>
-          </div>
+        <div className='w-full mt-5'>
+          <h4 className='font-semibold text-3xl font-sans mb-5'>Symptoms and causes of irregular periods.</h4>
           <article className='w-full grid grid-cols-2'>
             <div className='w-3/4'>
               <aside className='w-full'>
                 <img src={blog1} alt='' className='w-full mb-6'/>
               </aside>
-              <h4 className='font-semibold text-3xl font-sans'>Symptoms and causes of irregular periods.</h4>
-              <p className='font-sans text-base font-normal my-3'>Menstrual periods typically last four to seven days 
+              <p className='font-sans text-lg font-normal my-3'>Menstrual periods typically last four to seven days 
                 and occur roughly every 28 days. Examples of 
                 irregular periods include periods that occur fewer 
                 than 21 days or more than 35 days apart, missing 
                 three or more periods in row, and menstrual flow 
                 that’s much heavier or lighter than usual.</p>
-              <p className='font-sans text-base font-normal'>Sometimes, irregular periods can be caused by 
+              <p className='font-sans text-lg font-normal'>Sometimes, irregular periods can be caused by 
                 some medicines, exercising too much, having a very 
                 low or high body weight, or not eating enough 
                 calories. Hormone imbalances can also cause 

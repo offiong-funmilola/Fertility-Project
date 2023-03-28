@@ -8,12 +8,17 @@ import {useContext} from 'react';
 import RegContext from './Context/RegContext';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { toast } from 'react-toastify';
+import {signInWithEmailAndPassword, sendEmailVerification} from 'firebase/auth';
+import {auth} from '../config/firebase';
+import { useAuthValue } from './Context/AuthContext';
+
 
 
 function SignIn() {
     const navigate = useNavigate();
+    const {setTimeActive } = useAuthValue();
 
-    const {hide, type, handlePassword} =useContext(RegContext);
+    const {hide, type, handlePassword} = useContext(RegContext);
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -25,23 +30,41 @@ function SignIn() {
         }),
        
         onSubmit: (values) => {
-            fetch('http://localhost:5000/users')
-            .then((res) => res.json())
-            .then((users)=>{
-                const response = users.find((user) => user.email === values.email && user.password === values.password)
-                if(response) {
-                    toast.success("Login successful")
-                    formik.resetForm();
-                    navigate('/account');  
+            // fetch('http://localhost:5000/users')
+            // .then((res) => res.json())
+            // .then((users)=>{
+            //     const response = users.find((user) => user.email === values.email && user.password === values.password)
+            //     if(response) {
+            //         toast.success("Login successful")
+            //         formik.resetForm();
+            //         navigate('/account');  
+            //     }
+            //     else {
+            //         toast.warning("Invalid login details") 
+            //     }
+            // })
+            // .catch((err) => toast.error('Enter a valid log in details'))
+            console.log(values.email);
+            signInWithEmailAndPassword(auth, values.email, values.password)
+            .then(()=> {
+                if(!auth.currentUser.emailVerified){
+                    sendEmailVerification(auth.currentUser)
+                    .then(()=> {
+                        setTimeActive(true)
+                        navigate('/verify')
+                    })
+                    .catch((err)=>{
+                        toast.error('Oops! something went wrong')
+                    })
                 }
-                else {
-                    toast.warning("Invalid login details") 
+                else{
+                    navigate('/account')
                 }
             })
-            .catch((err) => toast.error('Enter a valid log in details'))
-             
-        },
-       
+            .catch((err) => {
+                toast.error('Invalid login details')
+            })
+        } 
     })
 
     return (

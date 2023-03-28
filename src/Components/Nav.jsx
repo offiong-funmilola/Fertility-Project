@@ -17,7 +17,7 @@ function Nav() {
     <>
       <nav className='w-full h-full bg-inherit flex items-center justify-center'>
        <div className='flex items-center justify-center mr-auto'>
-        <p className='inline text font-sans font-medium text-lg xl:text-xl italic'>Fertility Pal</p>
+        <Link to='/' className='inline text font-sans font-medium text-3xl md:text-lg xl:text-xl italic'>FertilityPal</Link>
        </div>
        <div className='hidden md:flex md:gap-2 lg:gap-0'>
         <Link to='/' className='text font-sans font-bold text-sm lg:py-2 px-3 xl:text-xl'>Home</Link>
@@ -28,7 +28,7 @@ function Nav() {
         <Link to='/login' className='border-line text font-sans bg-white font-bold text-sm lg:py-2 px-4 xl:text-xl mr-2'>Sign in</Link>
         <Link to='/register' className='back font-sans font-bold  text-white text-sm lg:py-2 px-4 xl:text-xl'>Register</Link>
        </div>
-       <button type='button' onClick={handleClick} className='w-10 h-10 md:hidden'>{!menu ? <FaBars /> : <FaTimes />}</button>
+       <button type='button' onClick={handleClick} className='w-10 h-10 md:hidden'>{!menu ? <FaBars className='w-8 h-8'/> : <FaTimes className='w-8 h-8'/>}</button>
       </nav>
       <div className={!menu ? 'hidden' :'w-full bg-white flex flex-col fixed z-50 gap-4 px-14 items-center' }>
       <Link to='/' className='text font-sans font-bold text-xl'>Home</Link>

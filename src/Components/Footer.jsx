@@ -12,7 +12,7 @@ function Footer() {
             <div className='grid grid-cols-1 text-white gap-2'>
                 <div className='flex items-center justify-center mr-auto mb-2'>
                     <div className='w-3 h-12'><img src={logo} alt='signature'/></div>
-                    <h3 className='font-bold text-2xl mb-2'>Fertility Pal</h3>
+                    <Link to='/' className='font-bold text-2xl mb-2 italic'>FertilityPal</Link>
                 </div>
                 <div className='flex gap-4'>
                     <figure>

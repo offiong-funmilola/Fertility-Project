@@ -32,8 +32,8 @@ function Home() {
     <div className='w-full'>
         <section className='w-full px-8 lg:px-20 flex flex-col'>
             <Header />
-            <div className='flex flex-col w-full h-fit justify-center pt-8 pb-12 md:justify-between md:flex-row md:h-[592px] md:pt-12 md:pb-4 lg:pt-16 lg:pb-12'>
-                <div className='w-full flex flex-col mb-14 justify-center md:w-1/2 md:mb-0'>
+            <div className='flex flex-col w-full h-fit justify-center mt-8 md:mt-14 h-max-h-fit pb-16 md:justify-between md:flex-row md:pb-4 lg:h-max-h-fit lg:pb-16'>
+                <div className='w-full flex flex-col mt-4 mb-14 md:w-1/2 md:mb-0'>
                     <div className='pb-3 md:pd-0 lg:pb-3'>
                             <h1 className="card-title text-4xl font-sans font-semibold md:text-3xl lg:text-4xl">The Trusted Platform That</h1>
                             <h1 className="card-title text-4xl mt-4 font-sans font-semibold md:text-3xl md:mt-px lg:text-4xl lg:mt-2">Provides All The</h1> 
@@ -48,12 +48,12 @@ function Home() {
                             </p>
                         </div>
                         <div className="flex mt-8 md:pt-2 lg:mt-3">
-                            <div className="back text-white p-3 font-sans font-medium text-xl">
-                               Chat With A Doctor
-                            </div>
+                            <Link to='/resources' className="back text-white p-3 font-sans font-semibold text-xl">
+                               Explore Articles
+                            </Link>
                         </div>
                     </div>
-                <div className='flex items-center justify-center'>
+                <div className='flex w-full items-center justify-center md:w-1/2 md:items-start md:justify-end'>
                     <figure className=''>
                         <img src={newhero} alt="Hero"/>
                     </figure>
@@ -61,7 +61,7 @@ function Home() {
             </div>
             {/* grid grid-cols-2 md:grid-cols-4 justify-between text-center pb-14 */}
             {/* flex flex-wrap gap-6 font-medium text-2xl justify-between md:flex-nowrap */}
-            <div className='w-full mt-5 grid grid-cols-2 md:grid-cols-4 justify-between gap-5 pb-14'>
+            <div className='w-full mt-5 grid grid-cols-2 md:grid-cols-4 justify-between gap-8 pb-14'>
                     <div className='flex flex-col items-center justify-center text-lg font-sans font-semibold'>
                         <p >50+</p>
                         <p>Doctors</p>
@@ -71,7 +71,7 @@ function Home() {
                         <p>Patients</p>
                     </div>
                     <div className='flex flex-col items-center justify-center text-lg font-sans font-semibold'>
-                        <p >02+</p>
+                        <p >2+</p>
                         <p>Years Of Experience</p>
                     </div>
                     <div className='flex flex-col items-center justify-center text-lg font-sans font-semibold'>
@@ -121,42 +121,42 @@ function Home() {
                             <img src={service1} alt=''/>
                         </figure>
                         <h3 className='font-sans mb-2 font-medium text-xl'>Health Information</h3>
-                        <p className='font-normal text-base w-52'>We Provide you with information concerning your health.</p>
+                        <p className='font-normal text-base w-52 text-center'>We Provide you with information concerning your health.</p>
                     </div>
                     <div className='service w-64 h-72 p-2.5 flex flex-col items-center '>
                         <figure className='w-20 h-20 self-center mt-4 mb-1'>
                             <img src={service2} alt=''/>
                         </figure>
                         <h3 className='font-sans mb-2 font-medium text-xl'>Wellness</h3>
-                        <p className='font-normal text-base w-52'>Your one stop pal for overall wellness</p>
+                        <p className='font-normal text-base w-52 text-center'>Your one stop pal for overall wellness</p>
                     </div>
                     <div className='service w-64 h-72 p-2.5 flex flex-col items-center'>
                         <figure className='w-20 h-20 self-center mt-4 mb-1'>
                             <img src={service3} alt=''/>
                         </figure>
-                        <h3 className='font-sans mb-2 font-medium text-xl'>ChatWith A Doctor</h3>
-                        <p className='font-normal text-base w-52'>Let a doctor answer all your questions about infertility</p>
+                        <h3 className='font-sans mb-2 font-medium text-xl'>Chat With A Doctor</h3>
+                        <p className='font-normal text-base w-52 text-center'>Let a doctor answer all your questions about infertility</p>
                     </div>
                     <div className='service w-64 h-72 p-2.5 flex flex-col items-center'>
-                        <figure className='w-20 h-20 self-center mt-4 mb-1'>
+                        <figure className='w-20 h-20 self-center mt-4 mb-1 text-center'>
                             <img src={service4} alt=''/>
                         </figure>
                         <h3 className='font-sans mb-2 font-medium text-xl'>Menstrual Tracker</h3>
-                        <p className='font-normal text-base w-52'>We can help you keep track of your menstrual cycle accurately.</p>
+                        <p className='font-normal text-base w-52 text-center'>We can help you keep track of your menstrual cycle accurately.</p>
                     </div>
                     <div className='service w-64 h-72 p-2.5 flex flex-col items-center'>
                         <figure className='w-20 h-20 self-center mt-4 mb-1'>
                             <img src={service5} alt=''/>
                         </figure>
                         <h3 className='font-sans mb-2 font-medium text-xl'>PCOS</h3>
-                        <p className='font-normal text-base w-52'>Get information about PCOS and other hormonal disorders.</p>
+                        <p className='font-normal text-base w-52 text-center'>Get information about PCOS and other hormonal disorders.</p>
                     </div>
                     <div className='service w-64 h-72 p-2.5 flex flex-col items-center'>
                         <figure className='w-20 h-20 self-center mt-4 mb-1'>
                             <img src={article} alt=''/>
                         </figure>
                         <h3 className='font-sans mb-2 font-medium text-xl'>Articles</h3>
-                        <p className='font-normal text-base w-52'>Get unlimited access to trusted health articles.</p>
+                        <p className='font-normal text-base w-52 text-center'>Get unlimited access to trusted health articles.</p>
                     </div>
                 </div>
             </div>
@@ -351,7 +351,7 @@ function Home() {
                         <div className='flex flex-col p-9 items-center'>
                             <h3 className='font-normal text-2xl mt-6'>Lois Mark</h3>
                             <div className='flex text gap-2 mt-1 mb-4'><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
-                            <p className='font-normal text-base'>I felt the love and care from the community after sharing my reproductive health challenges and how lovely it was to get response from alot of ladies.</p>
+                            <p className='font-normal text-base'>I felt the love and care from the community after sharing my reproductive health challenges and it was lovely to have alot of ladies respond.</p>
                         </div>
                     </div>  
                 </div>
