@@ -54,7 +54,6 @@ function Registration() {
             // if (response.status > 300) {
             //     toast.error("Something went wrong, Please try again")
             // }  
-            console.log(formik.isValid);
             if(formik.isValid){
                 createUserWithEmailAndPassword(auth, values.email, values.password)
                 .then(() => {
